@@ -5,7 +5,7 @@ ec2=boto3.client('ec2')
 instance_id  = "i-08d49b255d44a745e"
 def check_instance_status(instance_id):
     try:
-        response = ec2.describe_instance_status(Instance_ids=[instance_id])
+        response = ec2.describe_instance_status(InstanceIds=[instance_id])
         print(response)
     except Exception as e:
         print(f"Error checking instance {instance_id} : {str(e)}")
